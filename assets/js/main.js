@@ -1,42 +1,32 @@
-var tarjetasdigimon = document.querySelector("#tarjeta");
-//conexion y solicituda a api
-fetch("https://digimon-api.vercel.app/api/digimon")
-  //respuesta y transformacion a json
-  .then((response) => response.json())
-  //guarda los datos en variable y realiza una accion
-  .then((digimones) => {
-    // llamada al metodo tabla que recibira los datos obtenido de la api
-    captura(digimones);
-  });
+$("document").ready(function () {
 
-//creacion de funcion tabla
-
-function captura(digimones) {
-  // limpia la informacion que tenga contenido
-  tarjetasdigimon.innerHTML = "";
-  //se recorre los datos recibidos de la api
-  for (let digimon of digimones) {
-    // ingresaremos lo datos que necesitamos en cada iteracion
-    // agregamos los datos que necesitamos en la table
-    tarjetasdigimon.innerHTML += `
+  let tarjetasdigimon = $(".cards");
+  capturdataDigimon();
 
 
-    <h1 id="nombreDigimon">${digimon.name}</h1>
-<p id="nivelDigimon"></p>
-<img id="imagenDigimon" src="${digimon.img}" alt="">
-   <p class="card-text">${digimon.level}</p>         
-       
+  function capturdataDigimon() {
+    fetch("https://digimon-api.vercel.app/api/digimon")
+      .then((response) => response.json())
+      .then((digimones) => captura(digimones))  
+      }
 
-
-
-              
+  function captura(digimones) {
+    
+    let html = "";
+    
+    for (let digimon of digimones) {
+          html += `
+          <div class="card col-6 d-flex flex-column justify-content-center align-items-center m-2" style="width: 15rem;">
+            <img src="${digimon.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">${digimon.level}
+              </p>
+              <h5 class="card-title">${digimon.name}</h5>
+            </div>
+          </div>      
       `;
-    // ponemos un contador que solo mostrara 10 registros
-    //  if (digimon.id == 5) {
-    //   break;
+    }
+    tarjetasdigimon.html(html)
   }
-}
-
-//  <img src="${digimon.img}" class="card-img-top" alt="${digimon.name}">
-//   <h5 class="card-title">${digimon.name}</h5>
-//   <div class="card-body">
+  
+});
