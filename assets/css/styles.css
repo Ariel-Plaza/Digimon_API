@@ -1,40 +1,79 @@
-/* #contenedorTarjetas{
- background-image: url("../img/fondotarjetas.png");
-} */
+  p {
+    margin: 0;
+  }
 
- /* .remove-bg{
-filter: brightness(1);
-mix-blend-mode:multiply;} */
-
-
-/* 
-#imagenDigimon {
-  /* background-image: url("../img/fondotarjetas.png"); */
-  /* } */
-
-  .cards__container{
+  /* Cards */
+  .cards__container {
     width: 100%;
     height: 800px;
-
     background-color: rgb(96, 216, 96);
   }
 
-  .cards{
+  .card__title {
+    top: 16px;
+    border-bottom: 3px solid rgb(202, 31, 25);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(202, 31, 25);
+    border-top: none;
+    border-radius: 3px;
+  }
+
+  .cards {
     background-color: cadetblue;
   }
- /*
-.img__container{
-  background-color: rgba(255, 255, 255, 0.911);  
-}*/
 
-    .card-img{
-      border-color: aqua;
-       background-image: url(/assets/img/fondotarjetas.png);
-      
-      
-    }
-  .card img{
+  .card {
+    height: 458px;
+    background-image: url(../img/fondotarjetas.png);
+  }
+
+  .card p {
+    font-size: 8px;
+  }
+
+  .card-img {
+    /* border: 1px solid #11cc40; */
+    border: 3px solid rgb(202, 31, 25);
+    border-radius: 5px;
+  }
+
+  .img__container {
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  .img__container .card img {
     height: 300px;
     width: 250px;
+  }
 
+  .card-body {
+    background-color: rgb(212, 30, 158);
+    max-height: 30px;
+  }
+
+  .card-level {
+    height: 25px;
+  }
+
+  .diagonal {
+    height: 25px;
+    clip-path: polygon(0 0, 0% 100%, 120% 100%, 0% 0%);
+    border: 1px solid;
+  }
+
+  .card-name {
+    height: 20px;
+    width: 98%;
+  }
+
+  .name__bottom {
+    height: 4px;
+    width: 100%;
+    margin-top: 5px;
+    border-bottom-right-radius: 6rem;
+  }
+
+  .card__description {
+    height: 60px;
   }

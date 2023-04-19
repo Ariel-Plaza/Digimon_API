@@ -1,33 +1,29 @@
 $("document").ready(function () {
-
   let tarjetasdigimon = $(".cards");
   capturdataDigimon();
-
 
   function capturdataDigimon() {
     fetch("https://digimon-api.vercel.app/api/digimon")
       .then((response) => response.json())
-      .then((digimones) => captura(digimones))  
+      .then((digimones) => captura(digimones));
   }
 
   function buscarDescripcion(name) {
     console.log(name);
     let descripcion;
-    fetch("https://www.digi-api.com/api/v1/digimon" + {name}, { mode: "no-cors" })
-      // https://digi-api.com/api/v1/skill/
+    fetch("https://digi-api.com/api/v1/digimon/" + {name}, { mode: "no-cors" })
+      // https://www.digi-api.com/api/v1/
       .then((response) => response.json())
 
       .then((digimones) => (descripcion = digimones.description));
-    // console.log(digimones))  
-      
-    // return descripcion; 
-}
-  
-  
-  function captura(digimones){
-    
+    // console.log(digimones))
+
+    // return descripcion;
+  }
+
+  function captura(digimones) {
     let html = "";
-    
+
     for (let digimon of digimones) {
       //fecth tomo el nombre
       let descripcion = buscarDescripcion(digimon.name);
@@ -71,8 +67,6 @@ $("document").ready(function () {
       ${ digimon.level }
       ${digimon.name} */
     }
-    tarjetasdigimon.html(html)
+    tarjetasdigimon.html(html);
   }
-  
 });
-
