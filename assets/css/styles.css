@@ -2,11 +2,29 @@
     margin: 0;
   }
 
+  /* Navbar */
+  .navbar {
+    background-color: #FF991A !important;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  /* Body */
+
+  body {
+    background-color: #cc8529;
+  }
+
+
+
+
   /* Cards */
   .cards__container {
     width: 100%;
     height: 800px;
-    background-color: rgb(96, 216, 96);
+
   }
 
   .card__title {
@@ -19,12 +37,13 @@
   }
 
   .cards {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
   }
 
   .card {
     height: 458px;
     background-image: url(../img/fondotarjetas.png);
+    margin: 5px;
   }
 
   .card p {
@@ -77,3 +96,32 @@
   .card__description {
     height: 60px;
   }
+
+  /* Listado */
+
+  .listImg {
+    text-align: center;
+    height: 70px;
+    border-radius: 40px;
+  }
+
+  /* Modal */
+
+  .modalPropio {
+    width: 70%;
+    position: fixed;
+    top: 15%;
+    bottom: 15%;
+    z-index: 100;
+    
+  }
+
+  .modal-body{
+    height: 400px;
+background-image: url(../img/relojdigi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /* End Modal */
