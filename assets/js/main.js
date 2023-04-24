@@ -15,13 +15,11 @@ $("document").ready(function () {
     for (let digimon of digimones) {
       html += `         
         <div class="card card-resize col-6 d-flex flex-column  align-items-center p-2" style="width: 20rem;" id="cardsize">
-
           <div class="card-img mb-2 ">
             <div class="img__container d-flex flex-column justify-content-center align-items-center">
               <img src="${digimon.img}" class="card-img-top  " alt="...">
             </div>
           </div>
-
           <div class="card-body w-100 d-flex p-0 flex-row justify-content-between align-items-center bg-danger rounded-3">
             <p class="card-level  align-self-end bg-dark text-light col-4   text-center fs-6">${digimon.level}</p>
             <span class="diagonal align-self-end bg-dark border-dark col-1  "></span>
@@ -36,7 +34,6 @@ $("document").ready(function () {
     tarjetasdigimon.html(html);
 
     // mostrar tarjeta completa
-
     $(".card").click(function () {
       let imagentarjetam =
         $(this)[0].children[0].children[0].children[0].currentSrc;
@@ -67,6 +64,7 @@ $("document").ready(function () {
       `;
     }
     listadodigimon.html(htmllist);
+    
     // mostrar digmon en modal
     $("tr").click(function () {
       let nombremodal = $(this)[0].children[0].textContent;

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +11,8 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <!-- JQuery-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-
   <title>Digimon</title>
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary text-light" style="background-color: #0a7fd3;">
@@ -28,43 +25,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="#">Listado</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
   </header>
-
   <main>
-
     <section class="table__container container">
       <table class="table table-striped">
         <thead>
           <tr>
-            <!-- <th scope="col">#</th> -->
             <th scope="col">Nombre</th>
             <th scope="col">Nivel</th>
             <th scope="col">Imagen</th>
           </tr>
         </thead>
         <tbody class="list">
-          <!-- <tr class="text-align-center fila">
-            <td id="nombre">Mark</td>
-            <td>Otto</td>
-            <td><img src="./assets/img/koromon.jpg" alt=""></td>
-          </tr> -->
-
         </tbody>
       </table>
-      
       <!-- Modal -->
       <div class="modal " id="myModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
@@ -74,7 +57,6 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body w-100 d-flex justify-content-center align-items-center">
-              
               <img class="imagen w-25" src="" alt="" >
             </div>
             <div class="modal-footer">
@@ -82,13 +64,9 @@
             </div>
           </div>
         </div>
-      </div>
-
-      
+      </div>      
     </section>
-
   </main>
-
   <footer>
   </footer>
 
@@ -99,5 +77,4 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
