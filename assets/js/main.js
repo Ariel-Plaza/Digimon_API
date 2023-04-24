@@ -10,7 +10,6 @@ $("document").ready(function () {
   }
 
   function captura(digimones) {
-
     // Tarjetas
     let html = "";
     for (let digimon of digimones) {
@@ -36,6 +35,26 @@ $("document").ready(function () {
     }
     tarjetasdigimon.html(html);
 
+    // mostrar tarjeta completa
+
+    $(".card").click(function () {
+      let imagentarjetam =
+        $(this)[0].children[0].children[0].children[0].currentSrc;
+      let nombretarjetam =
+        $(this)[0].children[1].children[2].children[0].textContent;
+      let niveltarjetam = $(this)[0].children[1].children[0].textContent;
+
+      $("#mimodal").removeClass("d-none");
+
+      $(".card-name-modal").text(nombretarjetam);
+      $(".img__top").attr("src", imagentarjetam);
+      $(".card-level-modal").text(niveltarjetam);
+    });
+
+    $(".btn-close").click(function () {
+      $("#mimodal").addClass("d-none");
+    });
+
     // Listado
     let htmllist = "";
     for (let digimon of digimones) {
@@ -48,33 +67,16 @@ $("document").ready(function () {
       `;
     }
     listadodigimon.html(htmllist);
-
+    // mostrar digmon en modal
     $("tr").click(function () {
       let nombremodal = $(this)[0].children[0].textContent;
       let nivel = $(this)[0].children[1].textContent;
       let imagen = $(this)[0].children[2].children[0].currentSrc;
-     
+
       $(".modal-title").text(nombremodal);
       $(".nivel").text(nivel);
       $(".imagen").attr("src", $(this)[0].children[2].children[0].currentSrc);
       $("#myModal").modal("show");
     });
-
-    // $("tr").click(function () {
-      // let nombremodal = $(this)[0].children[0].textContent;
-      // $("#mimodal").removeClass("d-none");
-      // $("#tittleModal").text(nombremodal);
-
-      //obtencion de datos de la fila
-      /* console.log($(this)[0].children);
-      console.log("nombre" + $(this)[0].children[0].textContent);
-      console.log("nivel" + $(this)[0].children[1].textContent);
-      console.log("img" + $(this)[0].children[2].children[0].currentSrc);
-      */
-    // });
-
-    // $(".btn-close").click(function () {
-    //   $("#mimodal").addClass("d-none");
-    // });
   }
 });

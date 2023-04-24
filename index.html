@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <!-- JQuery-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-
   <title>Digimon</title>
 </head>
 
@@ -33,7 +32,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="./listado.html">Listado</a>
-            </li>               
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -45,8 +44,8 @@
   </header>
 
   <main>
-    <section class="cards__container container h-100">
-      <div class="cards h-100 p-3 d-flex flex-row flex-wrap justify-content-center ">
+    <section class="cards__container container h-100 ">
+      <div class="cards h-100 p-3 d-flex flex-row flex-wrap justify-content-center">
 
         <!-- Card -->
         <div class="card  col-6 d-flex flex-column  align-items-center p-2 position-relative" id="cardsize"
@@ -56,7 +55,8 @@
               <img src="./assets/img/koromon.jpg" class="card-img-top" alt="...">
             </div>
           </div>
-          <div class="card-body w-100 d-flex p-0 flex-row justify-content-between align-items-center bg-danger rounded-3">
+          <div
+            class="card-body w-100 d-flex p-0 flex-row justify-content-between align-items-center bg-danger rounded-3">
             <p class="card-level  align-self-end bg-dark text-light col-4   text-center fs-6">Champion</p>
             <span class="diagonal align-self-end bg-dark border-dark col-1  "></span>
             <div class="name d-flex flex-column  col-7">
@@ -69,9 +69,39 @@
           </div>
         </div>
         <!-- End Card -->
-
       </div>
+
+      <!-- modal propio -->
+      <div id="mimodal" class="modalPropio container d-flex justify-content-center d-none">
+        <!-- text-light text-center w-100 -->
+        <div class="card__modal col-6 d-flex flex-column align-items-center p-2 position-relative rounded-3" id="cardsize">
+          <div class="card__modal-img mb-2 border-danger">
+            <div class="img__container d-flex flex-column justify-content-center align-items-center">
+              <img src="./assets/img/koromon.jpg" class="img__top" alt="...">
+            </div>
+          </div>
+          <div
+            class="card__modal-body w-100 d-flex p-0 flex-row justify-content-between align-items-center bg-danger rounded-3">
+            <p class="card-level-modal  align-self-end bg-dark text-light col-4 text-center fs-6"></p>
+            <span class="diagonal align-self-end bg-dark border-dark col-1  "></span>
+            <div class="name d-flex flex-column  col-7">
+              <h2 class="card-name-modal text-bg-danger text-center col-0 fs-6 m-0"> HerculesKabuterimon</h2>
+              <span class="name__bottom bg-dark "></span>
+            </div>
+          </div>
+          <div class="card__modal-description  w-100 bg-danger mt-2">
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- end modal -->
+
+
+
     </section>
+
+
 
   </main>
 
@@ -87,3 +117,31 @@
 </body>
 
 </html>
+
+<!-- <div class="up d-flex p-2">
+        <h1 id="tittleModal" class="col-11 text-center">Titulo</h1>
+        <button type="button" class="btn-close btn-close-white col-1" aria-label="Close"></button>
+      </div>
+      <div class="modalImage d-flex justify-content-center align-items-center">
+        <img id="imageModal" class="imgModal" src="" alt="">
+      </div>
+      <p id="descriptionModal">Nivel</p> -->
+
+
+
+<!-- .modalPropio {
+width: 70%;
+position: fixed;
+top: 15%;
+bottom: 15%;
+z-index: 100;
+
+}
+
+.modal-body{
+height: 400px;
+background-image: url(../img/relojdigi.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+} -->
