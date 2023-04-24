@@ -118,12 +118,13 @@
   }
 
   .img__top {
-    height: 336px;
+    height: 359px;
   }
 
 
 
   .card__modal-body {
+    width: 95%;
     background-color: rgb(212, 30, 158);
     max-height: 30px;
   }
@@ -147,8 +148,7 @@
 } */
 
   .btn-close {
-    margin-left: 0;
-    margin-right: 100%;
+    padding-top: 20px;
   }
 
 
